@@ -110,7 +110,7 @@ def create(article_url: str, board_id: Optional[str], dry_run: bool, count: int,
         sys.exit(1)
 
     # ── Step 2: Generate content ─────────────────────────────────────────────
-    console.print(f"\n[bold cyan]Step 2/4[/bold cyan] Generating {count} pin variations with Claude…")
+    console.print(f"\n[bold cyan]Step 2/4[/bold cyan] Generating {count} pin variations from templates…")
     from src.content_generator import generate_pins
     try:
         pins_content = generate_pins(
@@ -120,7 +120,6 @@ def create(article_url: str, board_id: Optional[str], dry_run: bool, count: int,
             article_url=article_url,
             categories=article.categories,
             count=count,
-            api_key=os.getenv("ANTHROPIC_API_KEY"),
         )
     except Exception as e:
         console.print(f"[red]Content generation failed:[/red] {e}")
