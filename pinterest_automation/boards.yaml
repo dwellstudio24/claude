@@ -1,0 +1,35 @@
+# Map your blog categories to Pinterest Board IDs.
+# Find board IDs by running:  python main.py boards
+#
+# Then replace the placeholder IDs below.
+
+boards:
+  living_room:    "BOARD_ID_HERE"
+  bedroom:        "BOARD_ID_HERE"
+  kitchen:        "BOARD_ID_HERE"
+  bathroom:       "BOARD_ID_HERE"
+  dining_room:    "BOARD_ID_HERE"
+  japandi:        "BOARD_ID_HERE"
+  color_ideas:    "BOARD_ID_HERE"
+  home_office:    "BOARD_ID_HERE"
+  entryway:       "BOARD_ID_HERE"
+  outdoor:        "BOARD_ID_HERE"
+  default:        "BOARD_ID_HERE"   # Fallback board
+
+# Keywords in article URL/categories → board key
+category_mapping:
+  "living room":  living_room
+  "living-room":  living_room
+  "bedroom":      bedroom
+  "kitchen":      kitchen
+  "bathroom":     bathroom
+  "dining room":  dining_room
+  "dining-room":  dining_room
+  "japandi":      japandi
+  "color":        color_ideas
+  "paint":        color_ideas
+  "home office":  home_office
+  "home-office":  home_office
+  "entryway":     entryway
+  "mudroom":      entryway
+  "outdoor":      outdoor

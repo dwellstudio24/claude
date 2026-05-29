@@ -1,0 +1,24 @@
+# Pinterest Pin Automation — Config
+# Edit these to match your preferences
+
+scheduling:
+  pins_per_article: 10
+  spread_days: 14           # Spread 10 pins across 14 days
+  start_offset_days: 1      # Start scheduling from tomorrow
+  timezone: "America/Los_Angeles"   # Southern California
+  posting_times:
+    - "09:00"
+    - "13:30"
+    - "19:00"
+
+image:
+  width: 1080
+  height: 1920              # 9:16 portrait
+  jpeg_quality: 88
+
+content:
+  max_title_length: 100
+  max_description_length: 500
+
+# Article link will be added as the pin destination URL
+pin_link_to_article: true
