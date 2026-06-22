@@ -208,17 +208,13 @@ Pillarの該当H2セクション内に各ClusterへのREAD MOREを追記する�
 
 ④〜⑧ H2セクション（4〜6個）
    各H2のパターン:
-   └─ [IMAGE: 16:9ヒーロー画像 — Leonardo AI生成・PART 8参照]  ← H2直後・本文前
    └─ H3: 2個/H2（各≤350文字）
-        └─ [IMAGE BLOCK: 9:16×2枚 columnsブロック — PART 8参照]  ← H3本文直後
    └─ READ MORE: Pillar記事へのリンクを最低1本（Step 3の厳格ルール参照 — 架空URL禁止）
    └─ My Top Tip: 🌿 1〜2箇所
 
 ⑨ FAQ（H2、5〜6問・短め・実際にGoogleで検索されるクエリ）
-   ⚠️ FAQ内のH3には画像を挿入しない
 
 ⑩ The Bottom Line（H2、2段落 + Tag me CTA）
-   ⚠️ The Bottom LineのH2には16:9画像を挿入しない
 ```
 
 **省略するセクション（語数を1,500語に抑えるため）:**
@@ -241,26 +237,21 @@ Pillarの該当H2セクション内に各ClusterへのREAD MOREを追記する�
 
 ④〜⑧ H2セクション（商品カテゴリ or 個別商品の深掘り）
    各H2のパターン:
-   └─ [IMAGE: 16:9ヒーロー画像 — Leonardo AI生成・PART 8参照]  ← H2直後・本文前
    └─ H3: 商品名 or 商品特徴
         - 具体的な商品名・素材・サイズ・価格帯
         - なぜTokiがこれを選んだか（EEAT: 一人称の視点）
         - **[商品名](URL)** でBold+リンク（WebSearchで実在URLを必ず取得・在庫確認必須）
         - My Top Tip: "I love pairing this with..."
-        └─ [IMAGE BLOCK: 9:16×2枚 columnsブロック — PART 8参照]  ← H3本文直後
    └─ READ MORE: Pillar記事へのリンクを最低1本（Step 3の厳格ルール参照 — 架空URL禁止）
 
 ⑨ My Favorite Shops（H2）
    ← Joss & Main / 2Modern / AllModern の3店舗
    ← seo-blog-writerのMy Favorite Shops形式と同一（Toki's handpick voice）
    ← 商品は実在・在庫確認済みのもののみ使用
-   ⚠️ My Favorite ShopsのH2には16:9画像を挿入しない
 
 ⑩ FAQ（H2、5〜6問）
-   ⚠️ FAQ内のH3には画像を挿入しない
 
 ⑪ The Bottom Line（H2、2段落 + Tag me CTA）
-   ⚠️ The Bottom LineのH2には16:9画像を挿入しない
 ```
 
 ---
@@ -581,42 +572,9 @@ rankmath_data = {
 | KW密度 | 1.0–2.0%（Focus + Secondary 5つ合計） |
 | 内部リンク | Pillar→Cluster / Cluster→Pillar（必須）|
 | My Favorite Shops | Shop型のみ |
-| 画像 | Leonardo AI MCPで自動生成・WPメディア経由（PART 8参照） |
+| 画像 | Tokiが手動でWPにアップロード |
 | WP保存ステータス | `"draft"` のみ（公開はTokiが手動） |
 | Rank Math KW | 5つカンマ区切り（必須） |
 | dropCap | 最初の `<!-- wp:paragraph -->` に `{"dropCap":true}` |
 | YouTube embed | Key Takeaways直後に必ず1本 |
 
----
-
-## PART 8: IMAGE GENERATION WITH LEONARDO AI
-
-seo-blog-writerのPART 8と完全に同じルールを適用する。
-Cluster記事での省略対象セクションは以下の通り。
-
-### Cluster記事での画像挿入ルール
-
-| セクション | 枚数 | サイズ | 配置 | 省略 |
-|---|---|---|---|---|
-| 各H2直後 | 1枚 | 16:9（1344×768px） | H2見出し直後・本文前 | My Favorite Shops（Shop型のみ）/ The Bottom Line |
-| 各H3直後 | 2枚 | 9:16（768×1344px） | H3本文直後 | FAQセクション内の全H3 |
-
-### プロンプト・生成・WPアップロード・ブロック挿入
-
-→ **seo-blog-writerのPART 8（Step 1〜Step 4）をそのまま適用する。**
-
-モデル・品質・サイズ設定も同一:
-- Model: GPT Image 2
-- Quality: low
-- 16:9サイズ: width=1344, height=768
-- 9:16サイズ: width=768, height=1344
-
-### 実行タイミング（Cluster記事）
-
-```
-3.3/3.4 記事執筆完了
-  ↓
-PART 8 画像生成（seo-blog-writer PART 8 Step 1〜4と同手順）
-  ↓
-PART 5 WordPress保存（下書き）
-```
